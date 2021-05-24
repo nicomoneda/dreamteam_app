@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :dreams
   has_many :dreams, through: :bookings
 
-  validates :name, presence :true
+  validates :name, presence: :true
 end
