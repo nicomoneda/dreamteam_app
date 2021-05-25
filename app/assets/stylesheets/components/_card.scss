@@ -1,0 +1,66 @@
+.card {
+  border : none;
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  margin-bottom: 64px;
+}
+
+.card_poster {
+  border-radius: 100%;
+  object-fit: cover;
+  width: 300px;
+  height: 300px;
+  margin-bottom: 32px;
+}
+
+.card_category p {
+  border: 1px solid #8BB1CC;
+  padding: 4px 8px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-family: Lato;
+  color: #FFC8C7;
+  width: 95px;
+}
+
+.card_name p{
+  font-family: 'Exo', sans-serif;
+  color: #8BB1CC;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.card_description p {
+  font-family: Lato;
+  font-weight: 400;
+  color: #8BB1CC;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+   -webkit-box-orient: vertical;
+
+}
+
+.card_seemore {
+  position: absolute;
+  right: 0px;
+  font-size: 14px;
+  color: #8BB1CC;
+  margin-bottom: 12px;
+}
+
+.card_seemore:hover {
+  color: #829EB3;
+}
+
+.price_level {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}

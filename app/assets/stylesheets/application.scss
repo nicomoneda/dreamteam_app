@@ -10,4 +10,20 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/banner";
+@import "components/container";
+@import "components/backgroundimage";
+@import "components/plume";
+@import "components/card";
+@import "components/logo";
+@import "components/button";
 @import "pages/index";
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  font-family: Lato;
+}

@@ -1,2 +1,19 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner zoominheader" style="background-image: linear-gradient(rgba(60,60,60,0.5), rgba(60,60,60,0.5)), url(/assets/bg_home.png)">
+
+  <div class="container">
+    <div>
+      <%= image_tag 'logo_blanc.png', alt: 'icon', class: "logo"%>
+    </div>
+
+    <div>
+      <%= link_to 'Start to dream', dreams_path, class: "btn-ghost-lb" %>
+    </div>
+
+    <div>
+      <h3> <strong>Rêves</strong> n.m :</h3>
+      <p>Suite de phénomènes psychiques se produisant pendant le sommeil.</p>
+    </div>
+
+  </div>
+
+</div>

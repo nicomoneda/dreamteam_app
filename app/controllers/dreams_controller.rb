@@ -20,9 +20,26 @@ class DreamsController < ApplicationController
     end
   end
 
-   private
+  def edit
+    @dream = Dream.find(params[:id])
+  end
+
+  def update
+    @dream = Dream.find(params[:id])
+    @dream.update(dreams_params)
+
+    redirect_to dream_path(@dream)
+  end
+
+  def destroy
+    @dream = Dream.find(params[:id])
+    @dream.destroy
+    redirect_to dreams_path
+  end
+
+  private
 
   def dreams_params
-    params.require(:dream).permit(:name)
+    params.require(:dream).permit(:name, :description, :price, :transpiration_level, :category, :photo)
   end
 end
