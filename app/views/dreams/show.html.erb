@@ -1,1 +1,10 @@
 <h1> Dreams </h1>
+<ul>
+<% @dreams.each do |dream| %>
+    <%= dream.name%>
+    <%= dream.description%>
+    <%= dream.price%>
+    <%= dream.category%>
+    <img src= "<%= dream.poster_url %>" alt="dream_poster">
+</ul>
+
