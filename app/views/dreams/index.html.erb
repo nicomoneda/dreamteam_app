@@ -2,33 +2,49 @@
 
 <div class="container">
 
-  <h1>My dreams</h1>
-
-  <div class="card_grid">
+  <div class="card_grid row">
 
     <% @dreams.each do |dream| %>
-        <div class="card">
+        <div class="card col-4">
 
           <div class="card_category">
-            <%= dream.category, class: "card_category" %>
+            <p><%= dream.category %></p>
           </div>
 
-          <div class="card_poster">
-            <%= image_tag dream.poster_url, alt: 'poster_url', class: "card_poster"%>
+          <div>
+            <%= image_tag "poster_1", alt: 'poster_url', class: "card_poster" %>
           </div>
 
           <div class="infos">
              <div class="card_name">
-              <%= dream.name, class: "card_name"%>
+              <p><%= dream.name%></p>
             </div>
 
-            <%= dream.description, class:"card_description"%>
+            <div class="card_description">
+              <p><%= dream.description %></p>
+            </div>
 
-            <%= dream.price, class:"card_price"%>
+            <div class="card_seemore">
+              <%= link_to '> Voir plus', dream_path(dream) %>
+            </div>
 
-            <%= dream.transpiration_level, class:"card_level" %>
 
-            <%= link_to 'Edit', edit_dream_path(dream) %>
+            <div class="price_level">
+              <div>
+                <p><%= dream.price %><%= image_tag "plume.png", alt: 'plume', class: "plume" %></p>
+              </div>
+
+              <div>
+                <p><%= dream.transpiration_level %></p>
+              </div>
+
+              <div>
+                <p><%= link_to 'Edit', edit_dream_path(dream) %></p>
+              </div>
+
+            </div>
+
+
           </div>
         </div>
     <% end %>
