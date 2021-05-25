@@ -1,7 +1,4 @@
 class DreamsController < ApplicationController
-  def home
-  end
-
   def index
     @dreams = Dream.all
   end
@@ -23,7 +20,7 @@ class DreamsController < ApplicationController
     end
   end
 
- private
+   private
 
   def dreams_params
     params.require(:dream).permit(:name)
