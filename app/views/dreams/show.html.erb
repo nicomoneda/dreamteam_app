@@ -1,15 +1,12 @@
-<h1> <%= dream.name %> </h1>
+<h1> <%= @dream.name %> </h1>
 
-    <%= dream.description %>
-    <%= dream.price %>
-    <%= dream.transpiration_level %>
-    <%= dream.category %>
+<%= @dream.description %>
+<%= @dream.price %>
+<%= @dream.transpiration_level %>
+<%= @dream.category %>
 
-    <% if dream.poster_url %>
-    <img src="<%= dream.poster_url %>" alt="poster_url">
-    <% else %>
-    <%= cl_image_tag @dream.photo.key, height: 300, width: 400, crop: :fill %>
-    <% end %>
+<% if @dream.photo.present? %>
+    <%= cl_image_tag(@dream.photo.key, height: 300, width: 400, crop: :fill)  %>
+<% end %>
 
-    <%= link_to 'Edit', edit_dream_path(@dream) %>
-
+<%= link_to 'Back', dreams_path %>
