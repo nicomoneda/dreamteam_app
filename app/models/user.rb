@@ -5,8 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :bookings
-  has_many :dreams
-  has_many :dreams, through: :bookings
+
+  has_many :owner_dreams, foreign_key: 'owner_id', class_name: 'Dream'
+  has_many :customer_dreams, -> { distinct }, through: :bookings, source: 'dream'
 
   validates :name, presence: :true
 end
