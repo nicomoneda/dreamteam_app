@@ -10,5 +10,7 @@
             <%= dream.category %>
             <img src="<% dream.poster_url %>" alt="poster_url">
         </li>
+        <%= link_to 'Edit', edit_dream_path(dream) %>
     <% end %>
 </ul>
+
