@@ -1,0 +1,9 @@
+<h1>Profile de <%= current_user.name %></h1>
+<h2> <%= current_user.email %></h2>
+<ul>
+  <% current_user.owner_dreams.each do |dream| %>
+    <li><%= dream.name %> <%= dream.price %>€
+    </li>
+    <ul><li> <%= dream.description %></li></ul>
+  <% end %>
+</ul> 
