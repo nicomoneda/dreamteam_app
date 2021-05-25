@@ -1,4 +1,5 @@
 class Dream < ApplicationRecord
+  ALLOWED_CATEGORY = ["Cauchemar", "Aventure", "Historique", "Spatial", "Voyage"]
   belongs_to :owner,  class_name: 'User', 
                       foreign_key: 'owner_id'
 
@@ -7,4 +8,5 @@ class Dream < ApplicationRecord
   validates :description, presence: :true
   validates :price, presence: :true
   validates :price, numericality: :true
+  validates :category, inclusion: { in: ALLOWED_CATEGORY }
 end
