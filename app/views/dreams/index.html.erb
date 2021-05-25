@@ -41,6 +41,9 @@
               <div>
                 <p><%= link_to 'Edit', edit_dream_path(dream) %></p>
               </div>
+              <%= link_to 'Show', dream_path(dream) %>
+              <%= link_to 'Edit', edit_dream_path(dream) %>
+              <%= link_to 'Destroy', dream, method: :delete, data: { confirm: 'Are you sure?' } %>
 
             </div>
 

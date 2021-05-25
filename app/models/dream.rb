@@ -1,7 +1,8 @@
 class Dream < ApplicationRecord
   ALLOWED_CATEGORIES = ["Cauchemar", "Aventure", "Historique", "Spatial", "Voyage"]
-  belongs_to :owner,  class_name: 'User', 
+  belongs_to :owner,  class_name: 'User',
                       foreign_key: 'owner_id'
+  has_one_attached :photo
 
   validates :transpiration_level, inclusion: { in: (1..5) }
   validates :name, presence: :true
