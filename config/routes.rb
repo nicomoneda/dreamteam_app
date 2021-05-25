@@ -11,5 +11,5 @@ Rails.application.routes.draw do
   get 'bought_dreams', to: 'dreams#bought'
   get 'my_dreams', to: 'dreams#sold'
 
-  get 'my_profile', to: 'user#profile'
+  get 'my_profile', to: 'users#profile'
 end
