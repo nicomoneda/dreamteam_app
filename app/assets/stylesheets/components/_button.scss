@@ -1,0 +1,17 @@
+.btn-ghost-lb {
+  background-color: rgb(139, 177, 204);
+  color: white;
+  border-radius: 50px;
+  font-size: 24px;
+  font-family:'Exo', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 16px 24px;
+  letter-spacing: 1px;
+}
+
+.btn-ghost-lb:hover {
+  background-color: rgb(255, 200, 199);
+  color: white;
+  transition: background-color 2s ease;
+}

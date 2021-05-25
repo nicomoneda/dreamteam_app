@@ -1,14 +1,36 @@
-<h1>My dreams</h1>
 
-<ul>
+
+<div class="container">
+
+  <h1>My dreams</h1>
+
+  <div class="card_grid">
+
     <% @dreams.each do |dream| %>
-        <li>
-            <%= dream.name %>
-            <%= dream.description %>
-            <%= dream.price %>
-            <%= dream.transpiration_level %>
-            <%= dream.category %>
-            <img src="<% dream.poster_url %>" alt="poster_url">
-        </li>
+        <div class="card">
+
+          <div class="card_category">
+            <%= dream.category, class: "card_category" %>
+          </div>
+
+          <div class="card_poster">
+            <%= image_tag dream.poster_url, alt: 'poster_url', class: "card_poster"%>
+          </div>
+
+          <div class="infos">
+             <div class="card_name">
+              <%= dream.name, class: "card_name"%>
+            </div>
+
+            <%= dream.description, class:"card_description"%>
+
+            <%= dream.price, class:"card_price"%>
+
+            <%= dream.transpiration_level, class:"card_level" %>
+
+            <%= link_to 'Edit', edit_dream_path(dream) %>
+          </div>
+        </div>
     <% end %>
-</ul>
+  </div>
+</div>
