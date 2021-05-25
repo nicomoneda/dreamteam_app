@@ -1,14 +1,14 @@
 <h1>My dreams</h1>
 
 <ul>
-    <li>
-        <%= @dreams.each do |dream| %>
-        <%= dream.name %>
-        <%= dream.description %>
-        <%= dream.price %>
-        <%= dream.transpiration_level %>
-        <%= dream.category %>
-        <img src="<% dream.poster_url %>" alt="poster_url">
-        <% end %>
-    </li>
+    <% @dreams.each do |dream| %>
+        <li>
+            <%= dream.name %>
+            <%= dream.description %>
+            <%= dream.price %>
+            <%= dream.transpiration_level %>
+            <%= dream.category %>
+            <img src="<% dream.poster_url %>" alt="poster_url">
+        </li>
+    <% end %>
 </ul>
