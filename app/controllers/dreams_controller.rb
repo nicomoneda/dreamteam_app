@@ -1,4 +1,7 @@
 class DreamsController < ApplicationController
+  def home
+  end
+
   def index
     @dreams = Dream.all
   end
@@ -8,10 +11,20 @@ class DreamsController < ApplicationController
   end
 
   def new
-    @dream = Dream
+    @dream = Dream.new
   end
 
-  private
+  def create
+    @dream = Dream.new(dreams_params)
+    if @dream.save
+      redirect_to dreams_path(@dream)
+    else
+      render :new
+    end
+  end
+
+ private
+
   def dreams_params
     params.require(:dream).permit(:name)
   end
