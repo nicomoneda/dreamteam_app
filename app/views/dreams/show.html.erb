@@ -1,6 +1,6 @@
-  <div class="container">
+  <div class="container-center">
     <% if @dream.photo.present? %>
-      <%= image_tag @dream.photo.key, class: "avatar-image"%>
+      <%= image_tag @dream.poster_url.key, class: "avatar-image"%>
     <% else %>
       <%= image_tag "poster_1.png", class: "avatar-image"%>
     <% end %>
@@ -21,7 +21,7 @@
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
       <h2>Book a dream</h2>
       <%= simple_form_for :search, method: "get" do |f| %>
-        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"}%>
         <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.button :submit, "Go", class: "btn btn-primary" %>
       <% end %>
