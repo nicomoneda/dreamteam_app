@@ -22,4 +22,11 @@
   color: white;
 }
 
-
+.banner-index {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('bg_index.png');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 80vh;
+  margin-bottom: 64px;
+}
