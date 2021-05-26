@@ -15,7 +15,9 @@
 
   <body>
 
-    <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+<% unless @hide_navbar %>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
       <%= link_to image_tag("logo_blanc.png"), dreams_path, class:"navbar-brand logo_navbar" %>
 
@@ -38,6 +40,9 @@
         </ul>
       </div>
     </div>
+<% end %>
+
+    
     <%= yield %>
   </body>
 </html>
