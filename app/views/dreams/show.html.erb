@@ -18,8 +18,6 @@
 
     <p class="dream_description"><%= @dream.description %></p>
 
-    <%= link_to 'Back', dreams_path, class: "btn-ghost-small" %>
-
     <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
       <h2>Book a dream</h2>
       <%= simple_form_for :search, method: "get" do |f| %>
@@ -28,5 +26,7 @@
         <%= f.button :submit, "Go", class: "btn btn-primary" %>
       <% end %>
     </div>
+
+    <%= link_to 'Back', dreams_path, class: "btn-ghost-small" %>
 </div>
 
