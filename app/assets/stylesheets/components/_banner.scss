@@ -22,4 +22,27 @@
   color: white;
 }
 
+.banner-index {
+  background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), asset-url('bg_index.png');
+  background-size: cover;
+  background-position: center;
+  padding: 150px 0;
+  height: 70vh;
+  margin-bottom: 64px;
+}
 
+.welcome_title {
+  font-family: 'Exo', sans-serif;
+  font-weight: 700;
+  color: #f4f0e6;
+  letter-spacing: 3px;
+  font-size: 85px;
+  white-space: nowrap;
+}
+
+.welcome_title strong {
+   color: transparent;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f4f0e6;
+}

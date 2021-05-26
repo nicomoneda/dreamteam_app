@@ -1,4 +1,8 @@
-
+<div class="banner-index">
+  <div class="container">
+    <h1 class="welcome_title"><strong>WELCOME TO </strong>SOMNIUM</h1>
+  </div>
+</div>
 
 <div class="container">
 
@@ -12,7 +16,7 @@
           </div>
 
           <div>
-            <%= image_tag "poster_1", alt: 'poster_url', class: "card_poster" %>
+            <%= image_tag "poster_1.png", alt: 'poster_url', class: "card_poster" %>
           </div>
 
           <div class="infos">
@@ -24,27 +28,19 @@
               <p><%= dream.description %></p>
             </div>
 
-            <div class="card_seemore">
-              <%= link_to '> Voir plus', dream_path(dream) %>
+            <div class="footer-card">
+              <div class="price_level">
+                <p><%= dream.price %></p>
+                <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
+                <p> | <%= dream.transpiration_level %></p>
+              </div>
+
+               <div class="card_seemore">
+                  <%= link_to '> Voir plus', dream_path(dream) %>
+                </div>
             </div>
 
 
-            <div class="price_level">
-              <div>
-                <p><%= dream.price %><%= image_tag "plume.png", alt: 'plume', class: "plume" %></p>
-              </div>
-
-              <div>
-                <p><%= dream.transpiration_level %></p>
-              </div>
-
-              <div>
-                <p><%= link_to 'Edit', edit_dream_path(dream) %></p>
-              </div>
-
-              <%= link_to 'Destroy', dream, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-            </div>
 
 
           </div>
