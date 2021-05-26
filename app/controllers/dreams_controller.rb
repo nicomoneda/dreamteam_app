@@ -1,10 +1,12 @@
 class DreamsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @dreams = Dream.all
   end
 
   def show
     @dream = Dream.find(params[:id])
+    @booking = Booking.new
   end
 
   def new

@@ -13,6 +13,7 @@
   </head>
 
   <body>
+
     <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
       <%= link_to image_tag("logo_blanc.png"), dreams_path, class:"navbar-brand logo_navbar" %>
@@ -27,7 +28,12 @@
             <%= link_to 'Add a dream', new_dream_path, class:"nav-link" %>
           </li>
 
-
+        <li class="nav-item">
+        <% if current_user %>
+           <%= link_to "déconnexion", destroy_user_session_path, method: :delete %>
+           <% end %>
+       </li>
+          
         </ul>
       </div>
     </div>
