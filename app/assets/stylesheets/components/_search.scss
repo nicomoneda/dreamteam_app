@@ -1,0 +1,39 @@
+#cover
+{
+    width: 550px;
+    padding: 0px 8px 0px 8px;
+    background-color: #FFC8C7;
+    border-radius: 20px;
+    box-shadow: 0 5px 30px #FFC8C7, 0 0 0 10px #ffffffeb;
+    transform: scale(0.6);
+}
+
+#query 
+{
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    font-family: Lato;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+#query:active
+{
+    border: none;
+}
+
+#query::placeholder
+{
+    color: white;
+    font-size: 24px;
+    font-family: Lato;
+    font-weight: 400;
+}
+
+.loop
+{
+    background-color: transparent;
+    border: none;
+    color: white;
+}
