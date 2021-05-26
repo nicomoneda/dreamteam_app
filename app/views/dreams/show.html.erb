@@ -13,7 +13,7 @@
     <div class="dream-details">
       <p class="dream_price"><%= @dream.price %></p>
       <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
-      <p class="dream_transpiration_level"><%= @dream.transpiration_level %></p>
+      <p class="dream_transpiration_level"><%= image_tag "tete_#{@dream.transpiration_level}.png", class: "tete"%></p>
     </div>
 
     <p class="dream_description"><%= @dream.description %></p>
