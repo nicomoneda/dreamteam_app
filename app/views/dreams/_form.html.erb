@@ -1,22 +1,40 @@
-<%= simple_form_for(@dream) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
 
-  <%= f.label :price %>
-  <%= f.text_field :price %>
+  <%= simple_form_for(@dream) do |f| %>
+    <div>
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: "Select a name" %>
+    </div>
 
-  <%= f.label :transpiration_level %>
-  <%= f.text_field :transpiration_level %>
+     <div>
+    <%= f.label :description %>
+    <%= f.text_field :description, placeholder: "Select a description" %>
+     </div>
 
-  <%= f.label :category %>
-  <%= f.text_field :category %>
+     <div>
+      <%= f.label :price %>
+      <%= f.text_field :price, placeholder: "Which price ?" %>
+     </div>
 
-  <%= f.input :photo, as: :file %>
+     <div>
+      <%= f.label :transpiration_level %>
+      <%= f.text_field :transpiration_level %>
+     </div>
 
-  <%= f.submit %>
-<% end %>
+     <div>
+      <%= f.label :category %>
+      <%= f.text_field :category%>
+     </div>
 
-<%= link_to 'Back', dreams_path %>
+     <div>
+       <%= f.input :photo, as: :file %>
+     </div>
+
+
+    <%= f.submit %>
+  <% end %>
+
+
+
+
+
