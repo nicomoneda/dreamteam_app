@@ -20,7 +20,7 @@ Dream.create( name: "Océan de ténèbre",                    description: "Rien
               price: 3, transpiration_level: 2, category: "Cauchemar", owner: lucas)
 Dream.create( name: "Pourquoi pas moi ?",                  description: "Votre navire vient de faire naufrage au large des côtes. Vous êtes parvenu à monter à bord de votre radeau de survie. Malheureusement, cette mer est infestée de requins affamés par la surpêche. Ces derniers n'hésitent pas à s'en prendre à vous…", 
               price: 3, transpiration_level: 3, category: "Aventure", owner: lucas)
-Dream.create( name: "La machine à voyager dans le temps",  description: "C'est bon ! La machine à voyager dans le temps vient (enfin) d'être inventée ! Voyagez à travers les âges et modifiez le passé et l'avenir à votre guise.", 
+Dream.create( name: "Voyage dans le temps",                description: "C'est bon ! La machine à voyager dans le temps vient (enfin) d'être inventée ! Voyagez à travers les âges et modifiez le passé et l'avenir à votre guise.", 
               price: 23, transpiration_level: 5, category: "Aventure", owner: lucas)
 Dream.create( name: "Les gants magiques",                  description: "Vous découvrez une paire de gants. Façonnez ce que vous avez toujours rêvé de créer !", 
               price: 12, transpiration_level: 3, category: "Aventure", owner: nico)
