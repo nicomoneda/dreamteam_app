@@ -18,6 +18,8 @@
 @import "components/logo";
 @import "components/button";
 @import "pages/index";
+@import "flatpickr/dist/flatpickr";
+@import "flatpickr/dist/themes/airbnb";
 
 a, a:hover, a:focus, a:active {
   text-decoration: none;
@@ -28,3 +30,5 @@ p {
   font-family: Lato;
   margin-bottom: 0px;
 }
+
+
