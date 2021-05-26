@@ -3,7 +3,7 @@
   overflow: hidden;
   background: transparent;
   position: relative;
-  margin-bottom: 64px;
+  margin-bottom: 94px;
 }
 
 .card_poster {
@@ -44,15 +44,13 @@
    display: -webkit-box;
    -webkit-line-clamp: 2; /* number of lines to show */
    -webkit-box-orient: vertical;
+   margin-top: 20px;
 
 }
 
 .card_seemore {
-  position: absolute;
-  right: 0px;
   font-size: 14px;
   color: #8BB1CC;
-  margin-bottom: 12px;
 }
 
 .card_seemore:hover {
@@ -61,6 +59,23 @@
 
 .price_level {
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.price_level p {
+  font-family: Exo;
+  font-weight: 600;
+  font-size: 20px;
+  color: #829EB3;
+}
+
+.footer-card {
+  display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
+  background-color: rgba(255, 225, 224,0.5);
+  padding: 5px 25px;
+  border-radius: 5px;
+  margin-top: 20px;
 }
