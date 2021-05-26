@@ -15,3 +15,21 @@
   color: white;
   transition: background-color 2s ease;
 }
+
+.btn-ghost-small {
+  background-color: rgb(139, 177, 204);
+  color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  font-family:'Exo', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+}
+
+.btn-ghost-small:hover {
+  background-color: transparent;
+  color: rgb(139, 177, 204);
+  border: 2px solid rgb(139, 177, 204);
+}

@@ -1,0 +1,67 @@
+.dream_name {
+  font-family: 'Exo';
+  color: rgb(130, 158, 179);
+  font-weight: 600;
+  font-size: 55px;
+  text-transform: uppercase;
+  margin-top: 32px;
+}
+
+.dream_description {
+    font-family: Lato;
+    margin-bottom: 0px;
+    line-height: 40px;
+    margin-bottom: 38px;
+    font-family: 'Lato';
+    font-size: 16px;
+    color: #8bb1cc;
+}
+
+.dream_price {
+
+}
+
+.dream_transpiration_level {
+
+}
+
+.dream_category {
+  border: 1px solid #8BB1CC;
+  padding: 4px 8px;
+  border-radius: 25px;
+  font-size: 12px;
+  font-family: Lato;
+  color: #FFC8C7;
+  width: 95px;
+  margin: auto;
+}
+
+
+.dream-details {
+  width: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 225, 224, 0.7);
+  padding: 0px 0px;
+  border-radius: 38px;
+  margin-top: 20px;
+  margin-bottom: 36px;
+  margin: 16px auto;
+}
+
+.dream-details p {
+  font-family: Lato;
+  font-weight: 400;
+  color: #8BB1CC;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+
+.dream-price {
+  font-family: Exo;
+  font-weight: 600;
+  font-size: 20px;
+  color: #829EB3;
+}
