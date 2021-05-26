@@ -5,9 +5,9 @@ class Dream < ApplicationRecord
   has_one_attached :photo
 
   validates :transpiration_level, inclusion: { in: (1..5) }
-  validates :name, presence: :true
-  validates :description, presence: :true
-  validates :price, presence: :true
-  validates :price, numericality: :true
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :price, presence: true
+  validates :price, numericality: true
   validates :category, inclusion: { in: ALLOWED_CATEGORIES }
 end
