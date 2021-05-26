@@ -14,7 +14,6 @@ class DreamsController < ApplicationController
     @select_choice = Dream.all.map do |d|
        d.category
     end
-
   end
 
   def create
@@ -29,6 +28,9 @@ class DreamsController < ApplicationController
 
   def edit
     @dream = Dream.find(params[:id])
+    @select_choice = Dream.all.map do |d|
+      d.category
+    end
   end
 
   def update
