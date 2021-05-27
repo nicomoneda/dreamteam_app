@@ -19,6 +19,7 @@
 @import "components/simple-form";
 @import "components/logo";
 @import "components/button";
+@import "components/my-profile";
 @import "components/new-form";
 @import "pages/index";
 @import "flatpickr/dist/flatpickr";
@@ -34,5 +35,8 @@ p {
   margin-bottom: 0px;
 }
 
+li {
+  list-style: none;
+}
 
 

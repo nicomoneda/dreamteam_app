@@ -1,23 +1,69 @@
-<h1>Profil de <%= current_user.name %></h1>
+<div class="container">
 
-<h2>Confirmation new dream !</h2>
-  <li>
-    <%= current_user.bookings.last.dream.name %>
-  </li>
 
-<h2>My dreams to sell</h2>
-<ul>
-  <% current_user.owner_dreams.each do |dream| %>
+  <%= image_tag current_user.avatar_url, alt: 'poster_url', class: "user_poster" %>
+
+  <h1> Bienvenue <%= current_user.name %></h1>
+
+  <h2>Un nouveau rêve vient d'être ajouté ! </h2>
     <li>
-      <%= dream.name %>
-      <%= dream.price %>€ 
+      <%= current_user.bookings.last.dream.name %>
+    </li>
+
+    <div class="card_grid row">
+
+    <% current_user.owner_dreams.each do |dream| %>
+        <div class="card col-4">
+
+          <div class="card_category">
+            <p><%= dream.category %></p>
+          </div>
+
+          <div>
+            <%= image_tag dream.poster_url, alt: 'poster_url', class: "card_poster" %>
+          </div>
+
+          <div class="infos">
+             <div class="card_name">
+              <p><%= dream.name%></p>
+            </div>
+
+            <div class="card_description">
+              <p><%= dream.description %></p>
+            </div>
+
+            <div class="footer-card">
+              <div class="price_level">
+                <p><%= dream.price %></p>
+                <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
+                <p> | <%= dream.transpiration_level %></p>
+              </div>
+
+               <div class="card_seemore">
+                  <%= link_to '> Voir plus', dream_path(dream) %>
+                </div>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
+
+  <h2>My dreams to sell</h2>
+  <ul>
+    <% current_user.owner_dreams.each do |dream| %>
+      <li>
+        <%= dream.name %>
+        <%= dream.price %>€
+      </li>
+    <% end %>
+  </ul>
+
+  <h2>My dreams bought</h2>
+  <% current_user.bookings.each do |booking| %>
+    <li>
+      <%= booking.dream.name %> - <%= booking.date %>
     </li>
   <% end %>
-</ul> 
 
-<h2>My dreams bought</h2>
-<% current_user.bookings.each do |booking| %>
-  <li>
-    <%= booking.dream.name %> - <%= booking.date %>
-  </li>
-<% end %>
+</div>
+
