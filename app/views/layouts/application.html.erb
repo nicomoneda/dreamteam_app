@@ -48,7 +48,7 @@
             <%= link_to 'Add a dream', new_dream_path, class:"nav-link" %>
           </li>
 
-        <li class="nav-item-last">
+        <li class="nav-item">
         <% if current_user %>
            <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link btn-logout" %>
           <% else %>

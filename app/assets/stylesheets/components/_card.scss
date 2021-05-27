@@ -4,6 +4,9 @@
   background: transparent;
   position: relative;
   margin-bottom: 94px;
+  background: white;
+  padding: 16px;
+  border-radius: 25px;
 }
 
 .card_poster {
@@ -12,14 +15,18 @@
   width: 300px;
   height: 300px;
   margin-bottom: 32px;
+  overflow: hidden;
 }
 
+.card_poster:hover {
+  // changer en BG
+}
 .card_category p {
     border: 1px solid #8BB1CC;
     padding: 4px 8px;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 5px;
+    left: 5px;
     border-radius: 25px;
     font-size: 12px;
     font-family: Lato;
