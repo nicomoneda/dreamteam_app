@@ -61,10 +61,6 @@
                 <p> | <%= dream.transpiration_level %></p>
               </div>
 
-
-
-
-
                 <div class="card_seemore">
                   <%= link_to '> Voir plus', dream_path(dream) %>
               </div>
@@ -77,13 +73,29 @@
 
 
   <h2>My dreams bought</h2>
-  <% current_user.bookings.each do |booking| %>
 
-
-      <%= booking.dream.name %> - <%= booking.date %>
-
-
-  <% end %>
-
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Dream's Name</th>
+        <th scope="col">Booked</th>
+        <th scope="col">For the</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% current_user.bookings.order(date: :desc).each do |booking| %>
+      <tr>
+        <td>
+          <%= booking.dream.name %>
+        </td>
+        <td>
+          <%= booking.created_at.strftime("%Y-%m-%d") %>
+        </td>
+        <td>
+          <%= booking.date %>
+        </td>
+      </tr>
+        <% end %>
+    </tbody>
+  </table>
 </div>
-
