@@ -14,3 +14,25 @@
 .logo_navbar {
   width: 60px;
 }
+
+.nav-item a {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color:  white;
+    font-family: 'Open Sans Condensed';
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 20px;
+
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color:  #FFC8C7;
+}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+  color: #FFC8C7;
+}
