@@ -1,6 +1,6 @@
   <div class="container-center">
     <% if @dream.photo.present? %>
-      <%= image_tag @dream.poster_url.key, class: "avatar-image"%>
+      <%= image_tag @dream.poster_url, class: "avatar-image"%>
     <% else %>
       <%= image_tag "poster_1.png", class: "avatar-image"%>
     <% end %>

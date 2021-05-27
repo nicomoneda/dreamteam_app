@@ -1,38 +1,47 @@
 
+<div class="form">
+
 
   <%= simple_form_for(@dream) do |f| %>
     <div>
-      <%= f.label :name %>
-      <%= f.text_field :name, placeholder: "Select a name" %>
+      <%= f.label :name , class:"label_new"%>
+      <%= f.text_field :name, placeholder: "Select a name", class:"input_new"%>
     </div>
 
      <div>
-    <%= f.label :description %>
-    <%= f.text_field :description, placeholder: "Select a description" %>
+    <%= f.label :description, class:"label_new" %>
+    <%= f.text_field :description, placeholder: "Select a description", class:"input_new" %>
      </div>
 
      <div>
-      <%= f.label :price %>
-      <%= f.text_field :price, placeholder: "Which price ?" %>
+      <%= f.label :price, class:"label_new" %>
+      <%= f.text_field :price, placeholder: "Which price ?", class:"input_new" %>
      </div>
 
      <div>
-      <%= f.label :transpiration_level %>
-      <%= f.text_field :transpiration_level %>
+      <%= f.label :transpiration_level, class:"label_new" %>
+      <%= f.text_field :transpiration_level, placeholder: "How intense is it?", class:"input_new" %>
      </div>
 
      <div>
-      <%= f.label :category %>
-      <%= f.text_field :category%>
+      <%= f.label :category, class:"label_new" %>
+      <%= f.input :category, collection: @select_choice.to_set %>
      </div>
 
      <div>
        <%= f.input :photo, as: :file %>
      </div>
 
+     <div>
+      <%= f.submit class:'btn-submit' %>
+     </div>
 
-    <%= f.submit %>
+
   <% end %>
+</div>
+      <div class="back_btn">
+       <%= link_to 'Back', dreams_path , class:"btn-ghost-small"%>
+     </div>
 
 
 
