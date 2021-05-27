@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
                             dream_id: session[:save_date]['dream_id'],
                             user: current_user
        )
-      my_profile_path 
+      my_profile_path
     else
-      super
+      dreams_path
     end
   end
 end
