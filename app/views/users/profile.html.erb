@@ -11,7 +11,7 @@
     </li>
 
     <div class="card_grid row">
-
+      <h2>Les rêves dont je suis proprio</h2>
     <% current_user.owner_dreams.each do |dream| %>
         <div class="card col-4">
 
@@ -20,7 +20,13 @@
           </div>
 
           <div>
+          <% if dream.poster_url %>
             <%= image_tag dream.poster_url, alt: 'poster_url', class: "card_poster" %>
+            <% elsif dream.photo.attached? %>
+            <%= cl_image_tag dream.photo.key, crop: :fill, class: "card_poster" %>
+            <% else %>
+            <%=image_tag "logo_navbar.png", class: "card_poster"%>
+          <% end %>
           </div>
 
           <div class="infos">
@@ -41,6 +47,14 @@
 
                <div class="card_seemore">
                   <%= link_to '> Voir plus', dream_path(dream) %>
+              </div>
+
+                <div>
+                  <%= link_to 'Edit', edit_dream_path(dream) %>
+                </div>
+
+                <div>
+                  <%= link_to 'Destroy', dream, method: :delete, data: { confirm: 'Are you sure?' } %>
                 </div>
             </div>
           </div>
@@ -48,26 +62,13 @@
     <% end %>
   </div>
 
-  <h2>My dreams to sell</h2>
-  <ul>
-    <% current_user.owner_dreams.each do |dream| %>
-      <li>
-        <%= dream.name %>
-        <%= dream.price %>€
-      </li>
-    <% end %>
-  </ul>
+
 
   <h2>My dreams bought</h2>
   <% current_user.bookings.each do |booking| %>
     <li>
 
       <%= booking.dream.name %> - <%= booking.date %>
-
-      <%= dream.name %>
-      <%= dream.price %>€ 
-      <%= link_to 'Edit', edit_dream_path(dream) %>
-      <%= link_to 'Destroy', dream, method: :delete, data: { confirm: 'Are you sure?' } %>
 
     </li>
   <% end %>

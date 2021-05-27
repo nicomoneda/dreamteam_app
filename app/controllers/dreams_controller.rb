@@ -43,7 +43,7 @@ class DreamsController < ApplicationController
   def destroy
     @dream = Dream.find(params[:id])
     @dream.destroy
-    redirect_to dreams_path
+    redirect_to my_profile_path
   end
 
   private
