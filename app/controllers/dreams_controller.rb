@@ -11,6 +11,10 @@ class DreamsController < ApplicationController
 
   def new
     @dream = Dream.new
+    @select_choice = Dream.all.map do |d|
+       d.category
+    end
+
   end
 
   def create

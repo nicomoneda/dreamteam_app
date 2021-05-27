@@ -17,8 +17,9 @@
 }
 
 .btn-ghost-small {
-  background-color: rgb(139, 177, 204);
-  color: white;
+  background-color: transparent;
+  color: rgb(139, 177, 204);
+  border: 2px solid rgb(139, 177, 204);
   border-radius: 50px;
   font-size: 14px;
   font-family:'Exo', sans-serif;
@@ -29,7 +30,37 @@
 }
 
 .btn-ghost-small:hover {
-  background-color: transparent;
   color: rgb(139, 177, 204);
-  border: 2px solid rgb(139, 177, 204);
+  font-weight: 600;
+}
+
+.btn-submit {
+  background-color: rgb(139, 177, 204);
+  color: white;
+  border-radius: 50px;
+  font-size: 14px;
+  font-family:'Exo', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+  margin: auto;
+}
+
+.btn-submit:hover {
+  background-color: rgb(120, 177, 204);
+  color: white;
+}
+
+.btn-logout {
+  background-color: rgb(255, 200, 199);
+  border-radius: 50px;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+  margin: auto;
+}
+
+.back_btn {
+  text-align: center;
 }

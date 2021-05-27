@@ -1,16 +1,23 @@
 .simple_form {
     float: none;
     text-align : center;
-    border: 1px solid #CCC;
+    border: 1px solid #829EB3;
+    border-radius: 15px;
     font-family: Lato;
+    margin-bottom: 32px;
+    padding: 11px 27px;
+    margin-top: 48px;
 }
 .simple_form .input-box {
     margin-bottom: 10px;
+    margin: auto;
 
 }
 .simple_form input {
     margin-bottom: 10px;
-    margin: 2px 10px;
+    margin: 10px auto;
     display: block;
     text-align : center;
+    border-radius: 60px;
+    border: 1px solid #829EB3;
 }
