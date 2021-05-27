@@ -9,35 +9,44 @@
   <div class="card_grid row">
 
     <% @dreams.each do |dream| %>
-        <div class="card col-4">
+        <div class=" col-4">
 
-          <div class="card_category">
-            <p><%= dream.category %></p>
-          </div>
+          <div class="card">
 
-          <div>
-            <%= image_tag dream.poster_url, alt: 'poster_url', class: "card_poster" %>
-          </div>
-
-          <div class="infos">
-             <div class="card_name">
-              <p><%= dream.name%></p>
+            <div class="card_category">
+              <p><%= dream.category %></p>
             </div>
 
-            <div class="card_description">
-              <p><%= dream.description %></p>
+            <div>
+            <% if dream.poster_url %>
+              <%= image_tag dream.poster_url, alt: 'poster_url', class: "card_poster" %>
+              <% elsif dream.photo.attached? %>
+              <%= cl_image_tag dream.photo.key, crop: :fill, class: "card_poster" %>
+              <% else %>
+              <%=image_tag "logo_navbar.png", class: "card_poster"%>
+            <% end %>
             </div>
 
-            <div class="footer-card">
-              <div class="price_level">
-                <p><%= dream.price %></p>
-                <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
-                <p> | <%= dream.transpiration_level %></p>
+            <div class="infos">
+              <div class="card_name">
+                <p><%= dream.name%></p>
               </div>
 
-               <div class="card_seemore">
-                  <%= link_to '> Voir plus', dream_path(dream) %>
+              <div class="card_description">
+                <p><%= dream.description %></p>
+              </div>
+
+              <div class="footer-card">
+                <div class="price_level">
+                  <p><%= dream.price %></p>
+                  <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
+                  <%= image_tag "tete_#{dream.transpiration_level}.png", class: "tete"%>
                 </div>
+
+                <div class="card_seemore">
+                    <%= link_to '> Voir plus', dream_path(dream) %>
+                  </div>
+              </div>
             </div>
           </div>
         </div>
