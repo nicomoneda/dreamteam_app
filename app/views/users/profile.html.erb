@@ -4,11 +4,13 @@
   <%= image_tag current_user.avatar_url, alt: 'poster_url', class: "user_poster" %>
 
   <h1> Bienvenue <%= current_user.name %></h1>
+    <% if current_user.bookings.last %>
+      <h2>Un nouveau rêve vient d'être ajouté ! </h2>
+        <li>
+          <%= current_user.bookings.last.dream.name %>
+        </li>
+    <% end %>
 
-  <h2>Un nouveau rêve vient d'être ajouté ! </h2>
-    <li>
-      <%= current_user.bookings.last.dream.name %>
-    </li>
     <h2>Les rêves dont je suis proprio</h2>
     <hr>
     <div class="card_grid row">
