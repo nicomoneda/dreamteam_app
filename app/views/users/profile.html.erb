@@ -11,6 +11,8 @@
     <li>
       <%= dream.name %>
       <%= dream.price %>€ 
+      <%= link_to 'Edit', edit_dream_path(dream) %>
+      <%= link_to 'Destroy', dream, method: :delete, data: { confirm: 'Are you sure?' } %>
     </li>
   <% end %>
 </ul> 
