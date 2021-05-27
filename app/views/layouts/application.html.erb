@@ -49,7 +49,9 @@
         <li class="nav-item-last">
         <% if current_user %>
            <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link btn-logout" %>
-           <% end %>
+          <% else %>
+           <%= link_to "Log in", user_session_path, class:"nav-link btn-logout"  %>
+          <% end %>
        </li>
 
        <li class="nav-item">
