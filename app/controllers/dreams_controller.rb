@@ -1,7 +1,11 @@
 class DreamsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @dreams = Dream.all
+    if params[:query].present?
+      @dreams = Dream.search_by_name_description_category(params[:query]) 
+    else
+      @dreams = Dream.all
+    end
   end
 
   def show
