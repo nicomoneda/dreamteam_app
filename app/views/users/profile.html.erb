@@ -94,6 +94,9 @@
         <td>
           <%= booking.date %>
         </td>
+        <td>
+         <%= link_to "Voir plus", dream_path(booking.dream) %>
+        </td>
       </tr>
         <% end %>
     </tbody>
