@@ -1,9 +1,23 @@
-<h1>Profile de <%= current_user.name %></h1>
-<h2> <%= current_user.email %></h2>
+<h1>Profil de <%= current_user.name %></h1>
+
+<h2>Confirmation new dream !</h2>
+  <li>
+    <%= current_user.bookings.last.dream.name %>
+  </li>
+
+<h2>My dreams to sell</h2>
 <ul>
   <% current_user.owner_dreams.each do |dream| %>
-    <li><%= dream.name %> <%= dream.price %>€
+    <li>
+      <%= dream.name %>
+      <%= dream.price %>€ 
     </li>
-    <ul><li> <%= dream.description %></li></ul>
   <% end %>
 </ul> 
+
+<h2>My dreams bought</h2>
+<% current_user.bookings.each do |booking| %>
+  <li>
+    <%= booking.dream.name %> - <%= booking.date %>
+  </li>
+<% end %>

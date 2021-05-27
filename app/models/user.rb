@@ -9,5 +9,5 @@ class User < ApplicationRecord
   has_many :owner_dreams, foreign_key: 'owner_id', class_name: 'Dream'
   has_many :customer_dreams, -> { distinct }, through: :bookings, source: 'dream'
 
-  validates :name, presence: :true
+  validates :name, presence: true
 end
