@@ -9,14 +9,30 @@
     <li>
       <%= current_user.bookings.last.dream.name %>
     </li>
-
+    <h2>Les rêves dont je suis proprio</h2>
+    <hr>
     <div class="card_grid row">
-      <h2>Les rêves dont je suis proprio</h2>
+
     <% current_user.owner_dreams.each do |dream| %>
         <div class="card col-4">
 
           <div class="card_category">
             <p><%= dream.category %></p>
+          </div>
+
+          <div class="card_options">
+
+            <div class="edit">
+              <%= link_to edit_dream_path(dream) do %>
+                <i class="fas fa-pencil-alt"></i>
+              <% end %>
+            </div>
+
+            <div class="delete">
+              <%= link_to dream, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fas fa-minus-circle"></i>
+              <% end %>
+            </div>
           </div>
 
           <div>
@@ -45,17 +61,13 @@
                 <p> | <%= dream.transpiration_level %></p>
               </div>
 
-               <div class="card_seemore">
+
+
+
+
+                <div class="card_seemore">
                   <%= link_to '> Voir plus', dream_path(dream) %>
               </div>
-
-                <div>
-                  <%= link_to 'Edit', edit_dream_path(dream) %>
-                </div>
-
-                <div>
-                  <%= link_to 'Destroy', dream, method: :delete, data: { confirm: 'Are you sure?' } %>
-                </div>
             </div>
           </div>
         </div>
@@ -66,11 +78,11 @@
 
   <h2>My dreams bought</h2>
   <% current_user.bookings.each do |booking| %>
-    <li>
+
 
       <%= booking.dream.name %> - <%= booking.date %>
 
-    </li>
+
   <% end %>
 
 </div>
