@@ -19,8 +19,9 @@ class DreamsController < ApplicationController
 
   def create
     @dream = Dream.new(dreams_params)
+    @dream.owner = current_user
     if @dream.save
-      redirect_to dreams_path(@dream)
+      redirect_to my_profile_path
     else
       render :new
     end

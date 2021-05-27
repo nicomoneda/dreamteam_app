@@ -3,6 +3,7 @@ class Dream < ApplicationRecord
   belongs_to :owner,  class_name: 'User',
                       foreign_key: 'owner_id'
   has_one_attached :photo
+  has_many :bookings
 
   validates :transpiration_level, inclusion: { in: (1..5) }
   validates :name, presence: :true
