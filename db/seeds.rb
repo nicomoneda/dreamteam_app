@@ -10,9 +10,9 @@ Dream.destroy_all
 User.destroy_all
 
 lucas =     User.create(email: 'lucas.boitier@gmail.com', password: 'lucasdream', name: 'Lucas', avatar_url: 'lucas.png')
-nico =      User.create(email: 'nicolas.braun@gmail.com', password: 'nicolasdream', name: 'Nicolas', avatar_url: 'nico.jpg')
+nico =      User.create(email: 'nicolas.braun@gmail.com', password: 'nicolasdream', name: 'Nicolas', avatar_url: 'nico.png')
 louis =     User.create(email: 'louis.lafon@gmail.com', password: 'louisdream', name: 'Louis', avatar_url: 'louis.png')
-guillaume = User.create(email: 'guillaume.dore@gmail.com', password: 'guillaumedream', name: 'Guillaume', avatar_url: 'guillaume.jpg')
+guillaume = User.create(email: 'guillaume.dore@gmail.com', password: 'guillaumedream', name: 'Guillaume', avatar_url: 'guillaume.png')
 
 Dream.create( name: "Sombre instinct",                     description: "Une nuit sans lune, vous êtes perdu en forêt, seul. Vous n'avez aucun moyen de joindre un proche. Soudain, vous entendez quelque chose s'approcher de vous. Une silhouette se détache de l'ombre. Ecoutez votre instinct. Fuyez !", 
               price: 12, transpiration_level: 5, category: "Cauchemar", owner: lucas, poster_url: 'poster_1.png')
