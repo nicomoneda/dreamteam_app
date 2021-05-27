@@ -11,6 +11,5 @@ class ApplicationController < ActionController::Base
     else
       super
     end
-
   end
 end
