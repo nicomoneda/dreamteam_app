@@ -8,13 +8,13 @@
           <h1> Bienvenue <%= current_user.name %></h1>
         </div>
       </div>
-
+  <% if current_user.bookings.last %>
       <div class="hero_section">
       <h2 class="title_bought">Dernier rêve ajouté !</h2>
         <div class="card_grid">
           <div class="col-4" id="just_bought">
             <div class="card">
-  <% if current_user.bookings.last %>
+
 
             <div class="infos">
                <div class="card_name">
