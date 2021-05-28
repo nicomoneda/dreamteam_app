@@ -27,7 +27,7 @@ Dream.create( name: "Les gants magiques",                  description: "Vous d�
               price: 12, transpiration_level: 3, category: "Aventure", owner: nico, poster_url: 'poster_5.png')
 Dream.create( name: "Révolution française",                description: "Vous êtes au cœur de la révolution française, en plein été 1789. Vous participez à la prise de la Bastille. Vous participez à cet événement majeur, qui a profondément marqué le paysage politique français, passant d'une monarchie à une République.", 
               price: 15, transpiration_level: 1, category: "Historique", owner: nico, poster_url: 'poster_6.png')
-Dream.create( name: "Découverte de l'Amérique",            description: "Alors qu'il cherchait à atteindre l'Asie par l'Ouest, l'explorateur génois Christophe Colomb découvre l'Amérique. Revivez ce moment historique à bord de la caravelle 'Santa Maria'.", 
+Dream.create( name: "L'Amérique",                          description: "Alors qu'il cherchait à atteindre l'Asie par l'Ouest, l'explorateur génois Christophe Colomb découvre l'Amérique. Revivez ce moment historique à bord de la caravelle 'Santa Maria'.", 
               price: 15, transpiration_level: 2, category: "Historique", owner: nico, poster_url: 'poster_7.png')
 Dream.create( name: "Au plus haut de la Terre",            description: "Le 29 mai 1953, Edmund Hillary (à gauche) et le sherpa Tenzing Norgay atteignent le sommet de l'Everest, à 8 848 mètres d'altitude. Ils deviennent les premiers hommes à marcher sur la plus haute montagnene du monde. Et si vous preniez la place de l'un d'entre eux ?", 
               price: 30, transpiration_level: 3, category: "Historique", owner: nico, poster_url: 'poster_8.png')
