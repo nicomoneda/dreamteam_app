@@ -114,6 +114,7 @@ $colorSecondary: $purple;
       left: 8rem;
     }
     &:hover {
+      color:white;
       &::before,
       &::after {
         top: 0;
