@@ -6,6 +6,11 @@
 .hero_section {
   margin: 32px;
   text-align: center;
+
+}
+
+#just_bought {
+  margin: 16px auto 0px auto;
 }
 
 .welcome {
@@ -24,4 +29,58 @@
 .bg_pink {
   background-color:  #FFE1E0;
   padding: 32px;
+}
+
+.title_bought {
+  font-size: 15px;
+    font-family: 'Exo';
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    background-color: #8BB1CC;
+    padding: 8px 16px;
+    border-radius: 25px;
+    width: 250px;
+    margin: auto;
+}
+
+.title_my_dreams {
+    font-size: 20px;
+    font-family: 'Exo';
+    font-weight: 600;
+    color: #8BB1CC;
+    text-transform: uppercase;
+    padding-top: 16px;
+    padding-bottom: 32px;
+    margin: auto;
+}
+
+.avatar-last_bought {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFE1E0;
+  border-radius: 25px;
+  padding: 32px;
+}
+
+th {
+  color: #8BB1CC;
+  font-weight: 400;
+  font-family: Lato;
+
+}
+
+tr {
+  background-color: white;
+  font-family: Lato;
+  color: grey;
+}
+
+tr:hover {
+  background-color: rgb(80,80,80);
+  font-family: Lato;
+  color: white;
 }

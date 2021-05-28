@@ -9,22 +9,24 @@
   <div class="card_grid row">
 
     <% @dreams.each do |dream| %>
-        <div class=" col-4">
+        <div class=" col-4" >
 
-          <div class="card">
+          <div class="card" data-aos="fade-right">
 
             <div class="card_category">
               <p><%= dream.category %></p>
             </div>
 
             <div>
-            <% if dream.poster_url %>
-              <%= image_tag dream.poster_url, alt: 'poster_url', class: "card_poster" %>
-              <% elsif dream.photo.attached? %>
-              <%= cl_image_tag dream.photo.key, crop: :fill, class: "card_poster" %>
-              <% else %>
-              <%=image_tag "logo_navbar.png", class: "card_poster"%>
-            <% end %>
+              <%= link_to dream_path(dream) do  %>
+                <% if dream.poster_url %>
+                  <%= image_tag dream.poster_url, alt: 'poster_url', class: "card_poster" %>
+                  <% elsif dream.photo.attached? %>
+                  <%= cl_image_tag dream.photo.key, crop: :fill, class: "card_poster" %>
+                  <% else %>
+                  <%=image_tag "logo_navbar.png", class: "card_poster"%>
+                <% end %>
+               <% end %>
             </div>
 
             <div class="infos">

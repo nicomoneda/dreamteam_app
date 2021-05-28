@@ -12,11 +12,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo:wght@100;200;600;700;900&family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
-
 
 <% unless @hide_navbar %>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
@@ -67,8 +66,11 @@
     </div>
 <% end %>
 
-
-    <%= yield %>
+        <%= yield %>
+          <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   </body>
 </html>
 
