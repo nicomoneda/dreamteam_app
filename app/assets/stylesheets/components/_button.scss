@@ -114,6 +114,7 @@ $colorSecondary: $purple;
       left: 8rem;
     }
     &:hover {
+
       &::before,
       &::after {
         top: 0;
@@ -137,6 +138,10 @@ $colorSecondary: $purple;
 
 .btn p{
   margin: auto;
+}
+
+.btn:hover {
+  color:white;
 }
 
 @include btn__split($colorPrimary, $colorSecondary, $white);
