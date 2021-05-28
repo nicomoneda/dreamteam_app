@@ -13,12 +13,10 @@
 
   <div class="hero_section bg_pink">
     <h2> Dernier rêve ajouté ! </h2>
-      <div class="card_grid row">
+      <div class="card_grid">
         <div class="col-4">
-
-
           <div class="card_category">
-            <%= current_user.bookings.last.dream.name %>
+            <%= current_user.bookings.last.dream.category %>
           </div>
 
 <% if current_user.bookings.last %>
@@ -45,7 +43,7 @@
                 <div class="price_level">
                   <p><%= current_user.bookings.last.dream.price %></p>
                   <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
-                    <%= image_tag "tete_#{current_user.bookings.last.dream.transpiration_level}.png", class: "tete"%>
+                  <p> | <%= current_user.bookings.last.dream.transpiration_level %></p>
                 </div>
             </div>
           </div>
@@ -59,8 +57,8 @@
     <div class="card_grid row">
 
     <% current_user.owner_dreams.each do |dream| %>
-        <div class="card col-4">
-
+        <div class="col-4">
+          <div class="card">
           <div class="card_category">
             <p><%= dream.category %></p>
           </div>
@@ -103,13 +101,14 @@
               <div class="price_level">
                 <p><%= dream.price %></p>
                 <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
-                <%= image_tag "tete_#{dream.transpiration_level}.png", class: "tete"%>
+                <p> | <%= dream.transpiration_level %></p>
               </div>
 
                 <div class="card_seemore">
                   <%= link_to '> Voir plus', dream_path(dream) %>
               </div>
             </div>
+          </div>
           </div>
         </div>
     <% end %>
