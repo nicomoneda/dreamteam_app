@@ -24,6 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -34,3 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   initFlatpickr();
 });
+
+ // You can also use <link> for styles
+// ..
+AOS.init();
