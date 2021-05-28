@@ -71,9 +71,9 @@
 
 //color/ui color variables
 $white: #ececec;
-$black: #333333;
-$yellow: #ffff00;
-$purple: #8a19ff;
+
+$yellow: rgb(255, 200, 199);
+$purple: rgb(120, 177, 204);
 $colorPrimary: $yellow;
 $colorSecondary: $purple;
 
@@ -87,8 +87,11 @@ $colorSecondary: $purple;
     background: transparent;
     outline: none;
     font-size: 28px;
-    color: $textColor;
     z-index: 1;
+    color: white;
+    font-family: 'Exo';
+    font-weight: 600;
+    text-transform: uppercase;
 
     &::after,
     &::before {
@@ -115,12 +118,18 @@ $colorSecondary: $purple;
       &::after {
         top: 0;
         transform: skewx(0deg);
+        color:white;
+
       }
       &::after {
-        left: 0rem;
+        left: 1rem;
+        color:white;
+
       }
       &::before {
-        left: 8.75rem;
+        left: 11rem;
+        color:white;
+
       }
     }
   }
@@ -129,6 +138,7 @@ $colorSecondary: $purple;
 .btn p{
   margin: auto;
 }
-@include btn__split($colorPrimary, $colorSecondary, $black);
+
+@include btn__split($colorPrimary, $colorSecondary, $white);
 
 
