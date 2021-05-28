@@ -141,4 +141,19 @@ $colorSecondary: $purple;
 
 @include btn__split($colorPrimary, $colorSecondary, $white);
 
+.btn-show {
+  background-color: rgb(139, 177, 204);
+  color: white;
+  border-radius: 25px;
+  font-size: 12px;
+  font-family:'Exo', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  letter-spacing: 1px;
+}
 
+.btn-show:hover {
+  color: white;
+  background-color: rgb(159, 177, 204);
+}
