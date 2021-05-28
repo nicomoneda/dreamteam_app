@@ -21,3 +21,29 @@
     border-radius: 60px;
     border: 1px solid #829EB3;
 }
+
+form#new_user {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.user_title {
+    color: white;
+    font-family: 'Open Sans Condensed';
+    font-size: 56px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+  
+label.email, label.password, label.form-check-label, .shared_link {
+    color: white;
+    font-family: 'Open Sans Condensed';
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.login_btn {
+    color: white;
+    font-family: 'Open Sans Condensed';
+    font-size: 24px;
+}
