@@ -1,4 +1,5 @@
-  <div class="container-center">
+  <div class="bg_color">
+  <div class="container-show">
     <% if @dream.poster_url %>
       <%= image_tag @dream.poster_url, class: "avatar-image"%>
     <% else %>
@@ -26,5 +27,5 @@
     </div>
 
     <%= link_to 'Back', dreams_path, class: "btn-ghost-small" %>
+  </div>
 </div>
-

@@ -1,59 +1,49 @@
 <div class="container">
 
   <div class="hero_section">
-    <div class="avatar_profile">
-      <%= image_tag current_user.avatar_url, alt: 'poster_url', class: "user_poster" %>
-    </div>
-    <div class="welcome">
-      <h1> Bienvenue <%= current_user.name %></h1>
-    </div>
-  </div>
-
-  <hr>
-
-  <div class="hero_section bg_pink">
-    <h2> Dernier rêve ajouté ! </h2>
-      <div class="card_grid">
-        <div class="col-4">
-          <div class="card_category">
-            <%= current_user.bookings.last.dream.category %>
-          </div>
-
-<% if current_user.bookings.last %>
-          <div>
-          <% if current_user.bookings.last.dream.poster_url %>
-            <%= image_tag current_user.bookings.last.dream.poster_url, alt: 'poster_url', class: "card_poster" %>
-            <% elsif current_user.bookings.last.dream.photo.attached? %>
-            <%= cl_image_tag current_user.bookings.last.dream.photo.key, crop: :fill, class: "card_poster" %>
-            <% else %>
-            <%=image_tag "logo_navbar.png", class: "card_poster"%>
-          <% end %>
-          </div>
-
-          <div class="infos">
-             <div class="card_name">
-              <p><%= current_user.bookings.last.dream.name%></p>
-            </div>
-
-            <div class="card_description">
-              <p><%= current_user.bookings.last.dream.description %></p>
-            </div>
-
-            <div class="footer-card">
-                <div class="price_level">
-                  <p><%= current_user.bookings.last.dream.price %></p>
-                  <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
-                  <p> | <%= current_user.bookings.last.dream.transpiration_level %></p>
-                </div>
-            </div>
-          </div>
+    <div class="avatar-last_bought">
+      <div class="avatar_profile">
+        <%= image_tag current_user.avatar_url, alt: 'poster_url', class: "user_poster" %>
+        <div class="welcome">
+          <h1> Bienvenue <%= current_user.name %></h1>
         </div>
+      </div>
+
+      <div class="hero_section">
+      <h2 class="title_bought">Dernier rêve ajouté !</h2>
+        <div class="card_grid">
+          <div class="col-4" id="just_bought">
+            <div class="card">
+  <% if current_user.bookings.last %>
+
+            <div class="infos">
+               <div class="card_name">
+                <p><%= current_user.bookings.last.dream.name%></p>
+              </div>
+
+              <div class="card_description">
+                <p><%= current_user.bookings.last.dream.description %></p>
+              </div>
+
+              <div class="footer-card">
+                  <div class="price_level">
+                    <p><%= current_user.bookings.last.dream.price %></p>
+                    <%= image_tag "plume.png", alt: 'plume', class: "plume" %>
+                    <p> | <%= current_user.bookings.last.dream.transpiration_level %></p>
+                  </div>
+              </div>
+            </div>
+          </div>
+          </div>
+      </div>
+    </div>
+      <% end %>
     </div>
   </div>
-    <% end %>
+ <hr>
 
-    <h2>Les rêves dont je suis proprio</h2>
-    <hr>
+    <h2 class="title_my_dreams"> > Mes rêves</h2>
+
     <div class="card_grid row">
 
     <% current_user.owner_dreams.each do |dream| %>
@@ -115,8 +105,8 @@
   </div>
 
 
-
-  <h2>My dreams bought</h2>
+  <hr>
+  <h2 class="title_my_dreams"> > Mes derniers achats</h2>
 
     <table class="table">
     <thead>
@@ -124,6 +114,7 @@
         <th scope="col">Dream's Name</th>
         <th scope="col">Booked</th>
         <th scope="col">For the</th>
+        <th scope="col">Détails</th>
       </tr>
     </thead>
     <tbody>
@@ -139,7 +130,7 @@
           <%= booking.date %>
         </td>
         <td>
-         <%= link_to "Voir plus", dream_path(booking.dream) %>
+         <%= link_to "Voir plus", dream_path(booking.dream), class:"card_seemore" %>
         </td>
       </tr>
         <% end %>
